@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eläinvisa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -16,7 +22,8 @@
         <div class="question">
           <div class="inquestion">
             Mikä eläin on kyseessä: ruskea, karvainen, nukkuu talvet?
-            <div class="hints" style="text-align: start">
+            <hr />
+            <div class="hints">
               Vinkkit: Asuu metsässä, tassuissa kynnet, pitää hunajasta
             </div>
           </div>
@@ -27,8 +34,10 @@
         </div>
         <div class="submit">
           <div class="insubmit">
-            <label for="vastaus">Vastaus</label>
-            <input type="text" name="vastaus" id="vastaus" />
+            <div class="textSubmit">
+              <input type="text" name="vastaus" id="vastaus" />
+            </div>
+            <input type="submit" name="submit" value="submit" />
           </div>
           <div class="button"></div>
           <div class="inbutton"></div>
