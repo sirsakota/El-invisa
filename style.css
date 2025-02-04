@@ -113,7 +113,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: white;
+  background-color: rgb(153, 199, 199);
   border: 2px solid black;
   width: 179px;
   height: 63px;
