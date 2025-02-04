@@ -76,16 +76,18 @@ body {
   justify-content: space-around;
   background-color: rgb(153, 199, 199);
   width: 407px;
-  height: 141px;
+  height: 101px;
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .question {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 448px;
   height: 174px;
   background-color: #cce7ec;
@@ -121,6 +123,8 @@ hr {
   border: none;
   background-color: black;
   height: 2px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .submit {
