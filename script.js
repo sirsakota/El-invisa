@@ -63,6 +63,7 @@ const start = document.getElementById("start");
 const startScreen = document.getElementById("startScreen");
 const question = document.getElementById("question");
 const hints = document.getElementById("hints");
+const vastaus = document.getElementById("vastaus");
 
 function StartGame() {
   startScreen.remove();
@@ -75,11 +76,16 @@ function RandomQuestion(items) {
 
 function Setup() {
   let Question = RandomQuestion(animals.Data);
-  console.log(Question.Name);
   question.innerHTML = `${prefixQuestions} ${Question.Info}`;
   hints.innerHTML = `${prefixHints} ${Question.Hints[0]}, ${Question.Hints[1]}`;
 }
 
-function CheckAnswer() {}
+function CheckAnswer(AnimalName) {
+  console.log(vastaus.value);
+  if (!vastaus || !isNaN(vastaus.value)) {
+    console.log("Error");
+    return;
+  }
+}
 
 function Test() {}
