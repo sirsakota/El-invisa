@@ -84,6 +84,25 @@ body {
   font-size: 1.2rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.counters {
+  float: left;
+  background-color: #cce7ec;
+  border: 2px solid black;
+  width: 229px;
+  height: 76px;
+}
+
+.incount {
+  background-color: white;
+  border: 2px solid black;
+  width: 179px;
+  height: 63px;
+}
+
 hr {
   border: none;
   background-color: black;
