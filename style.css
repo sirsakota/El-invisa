@@ -105,6 +105,7 @@ body {
   align-items: center;
   background-color: #cce7ec;
   border: 2px solid black;
+  border-radius: 5px;
   width: 229px;
   height: 76px;
 }
