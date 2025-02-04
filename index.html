@@ -14,18 +14,25 @@
   </head>
   <body>
     <div class="main">
+      <div class="startScreen" id="startScreen">
+        <input
+          type="submit"
+          onclick="StartGame()"
+          name="start"
+          id="start"
+          value="Aloita"
+        />
+      </div>
       <div class="titlesect">
         <div class="intitle">Eläinvisa</div>
       </div>
 
       <div class="mainsect">
         <div class="question">
-          <div class="inquestion">
-            Mikä eläin on kyseessä: ruskea, karvainen, nukkuu talvet?
+          <div class="inquestion" id="question">
+            Mikä eläin on kyseessä: - - -
             <hr />
-            <div class="hints">
-              Vinkkit: Asuu metsässä, tassuissa kynnet, pitää hunajasta
-            </div>
+            <div class="hints" id="hints">Vinkkit: - - -</div>
           </div>
           <div class="hints"></div>
         </div>
@@ -43,11 +50,16 @@
             <div class="textSubmit">
               <input type="text" name="vastaus" id="vastaus" />
             </div>
-            <input type="submit" name="submit" value="submit" />
+            <input
+              type="submit"
+              onclick="CheckAnswer()"
+              name="submit"
+              value="Palauta"
+            />
           </div>
           <div class="button"></div>
           <div class="inbutton">
-            <input type="button" name="nappi" id="nappi" />
+            <input type="button" onclick="Test()" name="nappi" id="nappi" />
           </div>
         </div>
       </div>

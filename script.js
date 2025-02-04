@@ -53,6 +53,17 @@ const animals = {
   ],
 };
 
+const start = document.getElementById("start");
+const startScreen = document.getElementById("startScreen");
+
+function StartGame() {
+  startScreen.remove();
+}
+
+function CheckAnswer() {}
+
+function Test() {}
+
 for (let i = 0; i < animals.Data.length; i++) {
   console.log(animals.Data[i]);
 }
