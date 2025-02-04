@@ -33,7 +33,7 @@ const animals = {
     {
       Name: "Rotta",
       Info: "karvainen, pieni, musta rutto",
-      Hints: ["karvaton häntä", "nopeasti"],
+      Hints: ["karvaton häntä", "nopea"],
     },
     {
       Name: "Kissa",
@@ -43,7 +43,7 @@ const animals = {
     {
       Name: "Orava",
       Info: "ruskea, pieni, pitää maapähkinöistä",
-      Hints: ["nopeasti", "Nukkuu talvella"],
+      Hints: ["nopea", "Nukkuu talvella"],
     },
     {
       Name: "Hai",
@@ -53,17 +53,33 @@ const animals = {
   ],
 };
 
+let Lifes = 3;
+let CurrentScore = 0;
+let MaxScore = 10;
+let prefixQuestions = "Mikä eläin on kyseessä: ";
+let prefixHints = "Vinkit: ";
+
 const start = document.getElementById("start");
 const startScreen = document.getElementById("startScreen");
+const question = document.getElementById("question");
+const hints = document.getElementById("hints");
 
 function StartGame() {
   startScreen.remove();
+  Setup();
+}
+
+function RandomQuestion(items) {
+  return items[Math.floor(Math.random() * items.length)];
+}
+
+function Setup() {
+  let Question = RandomQuestion(animals.Data);
+  console.log(Question.Name);
+  question.innerHTML = `${prefixQuestions} ${Question.Info}`;
+  hints.innerHTML = `${prefixHints} ${Question.Hints[0]}, ${Question.Hints[1]}`;
 }
 
 function CheckAnswer() {}
 
 function Test() {}
-
-for (let i = 0; i < animals.Data.length; i++) {
-  console.log(animals.Data[i]);
-}
