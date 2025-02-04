@@ -2,6 +2,7 @@
   margin: 0;
   color: white;
   box-sizing: border-box;
+  text-shadow: 0 0 3px black;
 }
 
 body {
@@ -31,12 +32,11 @@ body {
 .mainsect {
   display: flex;
   flex-direction: row;
-  margin: 30px 10px;
   justify-content: center;
   align-items: center;
-  height: 826px;
+  height: 226px;
   width: 80%;
-  gap: 100px;
+  gap: 10px;
 }
 
 .main {
@@ -56,14 +56,15 @@ body {
   align-items: end;
   justify-content: center;
   width: 100%;
-  height: 400px;
+  height: 100px;
+  margin-bottom: 100px;
 }
 
 .intitle {
   width: 420px;
   height: 87.55px;
   background-color: #9fc0aa;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -89,8 +90,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 448px;
-  height: 174px;
+  min-width: 448px;
+  min-height: 174px;
   background-color: #cce7ec;
   border: 2px solid black;
   border-radius: 5px;
@@ -106,6 +107,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  font-size: 3rem;
 }
 
 .count {
@@ -117,7 +119,6 @@ body {
   border-radius: 5px;
   width: 229px;
   height: 76px;
-  font-size: 2rem;
 }
 
 .incount {
@@ -127,7 +128,7 @@ body {
   background-color: #aedce4;
   border: 2px solid black;
   border-radius: 5px;
-  width: 179px;
+  width: 209px;
   height: 63px;
 }
 
@@ -149,8 +150,9 @@ body {
   background-color: #aedce4;
   border: 2px solid black;
   border-radius: 5px;
-  width: 179px;
+  width: 209px;
   height: 63px;
+  color: rgb(165, 255, 165);
 }
 
 hr {
