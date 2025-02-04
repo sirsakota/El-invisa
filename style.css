@@ -30,12 +30,12 @@ body {
 
 .mainsect {
   display: flex;
-  flex-direction: column;
-  margin: 30px;
-  justify-content: center;
+  flex-direction: row;
+  margin: 30px 10px;
+  justify-content: space-evenly;
   align-items: center;
   height: 826px;
-  width: 100%;
+  width: 80%;
 }
 
 .main {
@@ -98,7 +98,9 @@ body {
 }
 
 .counters {
-  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #cce7ec;
   border: 2px solid black;
   width: 229px;
@@ -106,6 +108,9 @@ body {
 }
 
 .incount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   background-color: white;
   border: 2px solid black;
   width: 179px;
