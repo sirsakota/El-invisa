@@ -369,7 +369,7 @@ input[type="submit"]:hover {
   animation: healthloss1 0.5s;
 }
 
-@keyframes .healthloss1 {
+@keyframes healthloss1 {
   0% {
     color: #8dff71;
   }
@@ -382,7 +382,7 @@ input[type="submit"]:hover {
   animation: healthloss2 0.5s;
 }
 
-@keyframes .healthloss2 {
+@keyframes healthloss2 {
   0% {
     color: #ffee71;
   }
@@ -395,7 +395,7 @@ input[type="submit"]:hover {
   animation: healthloss3 0.5s;
 }
 
-@keyframes .healthloss3 {
+@keyframes healthloss3 {
   0% {
     color: #ff6565;
   }
