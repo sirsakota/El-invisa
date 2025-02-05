@@ -64,6 +64,10 @@ const startScreen = document.getElementById("startScreen");
 const question = document.getElementById("question");
 const hints = document.getElementById("hints");
 const vastaus = document.getElementById("vastaus");
+const Counter = document.getElementById("Counter");
+const HealthCounter = document.getElementById("HealthCounter");
+
+let AnimalName;
 
 function StartGame() {
   startScreen.remove();
@@ -74,17 +78,50 @@ function RandomQuestion(items) {
   return items[Math.floor(Math.random() * items.length)];
 }
 
+function CorrentAnswer() {
+  alert("Correct");
+  CurrentScore++;
+  Setup();
+}
+
+function WrongAnswer() {
+  alert("Wrong");
+  Lifes -= 1;
+  Setup();
+}
+
+function CheckHealth(value) {
+  if (value == 3) {
+    HealthCounter.style.color = "#8DFF71";
+  } else if (value == 2) {
+    HealthCounter.style.color = "#FFEE71";
+  } else if (value == 1) {
+    HealthCounter.style.color = "#FF6565";
+  } else {
+    HealthCounter.style.color = "#6C6C6C";
+  }
+}
 function Setup() {
+  CheckHealth(Lifes);
+  Counter.innerHTML = `${CurrentScore}/10`;
+  HealthCounter.innerHTML = `${Lifes}`;
   let Question = RandomQuestion(animals.Data);
+  AnimalName = Question.Name;
   question.innerHTML = `${prefixQuestions} ${Question.Info}`;
   hints.innerHTML = `${prefixHints} ${Question.Hints[0]}, ${Question.Hints[1]}`;
 }
 
-function CheckAnswer(AnimalName) {
+function CheckAnswer() {
   console.log(vastaus.value);
   if (!vastaus || !isNaN(vastaus.value)) {
     console.log("Error");
     return;
+  }
+
+  if (vastaus.value == AnimalName) {
+    CorrentAnswer();
+  } else {
+    WrongAnswer();
   }
 }
 
