@@ -60,7 +60,7 @@ let Hint2;
 let CurrentScore = 0;
 let MaxScore = 10;
 let prefixQuestions = "Mikä eläin on kyseessä: ";
-let prefixHints = "Vinkit: ";
+let prefixHints = "Vinkkit: ";
 
 const start = document.getElementById("start");
 const startScreen = document.getElementById("startScreen");
@@ -89,14 +89,14 @@ function CorrentAnswer() {
 
 function WrongAnswer() {
   HintsValue++;
+  alert(HintsValue);
   if (HintsValue == 1) {
     hints.innerHTML = `${prefixHints} ${Hint1}`;
   } else if (HintsValue == 2) {
-    hints.innerHTML = `${prefixHints} ${Hint1} ${Hint2}`;
-  } else {
-    return;
+    hints.innerHTML = `${prefixHints} ${Hint1}, ${Hint2}`;
   }
   Lifes -= 1;
+  CheckHealth(Lifes);
   Setup();
 }
 
@@ -112,7 +112,6 @@ function CheckHealth(value) {
   }
 }
 function Setup() {
-  CheckHealth(Lifes);
   Counter.innerHTML = `${CurrentScore}/10`;
   HealthCounter.innerHTML = `${Lifes}`;
   let Question = RandomQuestion(animals.Data);
@@ -120,7 +119,6 @@ function Setup() {
   Hint1 = Question.Hints[0];
   Hint2 = Question.Hints[1];
   question.innerHTML = `${prefixQuestions} ${Question.Info}`;
-  hints.innerHTML = `${prefixHints} - - -`;
 }
 
 function CheckAnswer() {
