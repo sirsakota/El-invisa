@@ -155,6 +155,49 @@ body {
   color: rgb(165, 255, 165);
 }
 
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.wrong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eccccc;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 448px;
+  height: 88px;
+  color: white;
+}
+
+.inwrong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffb2b2;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 417px;
+  height: 60px;
+  color: white;
+}
+
+.correct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccecd6;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 448px;
+  height: 88px;
+  color: white;
+}
+
 hr {
   border: none;
   background-color: black;
