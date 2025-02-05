@@ -198,6 +198,18 @@ body {
   color: white;
 }
 
+.insidecorrect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c4ffb2;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 417px;
+  height: 60px;
+  color: white;
+}
+
 hr {
   border: none;
   background-color: black;
