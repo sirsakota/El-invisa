@@ -54,6 +54,9 @@ const animals = {
 };
 
 let Lifes = 3;
+let HintsValue = 0;
+let Hint1;
+let Hint2;
 let CurrentScore = 0;
 let MaxScore = 10;
 let prefixQuestions = "Mikä eläin on kyseessä: ";
@@ -85,7 +88,14 @@ function CorrentAnswer() {
 }
 
 function WrongAnswer() {
-  alert("Wrong");
+  HintsValue++;
+  if (HintsValue == 1) {
+    hints.innerHTML = `${prefixHints} ${Hint1}`;
+  } else if (HintsValue == 2) {
+    hints.innerHTML = `${prefixHints} ${Hint1} ${Hint2}`;
+  } else {
+    return;
+  }
   Lifes -= 1;
   Setup();
 }
@@ -107,8 +117,10 @@ function Setup() {
   HealthCounter.innerHTML = `${Lifes}`;
   let Question = RandomQuestion(animals.Data);
   AnimalName = Question.Name;
+  Hint1 = Question.Hints[0];
+  Hint2 = Question.Hints[1];
   question.innerHTML = `${prefixQuestions} ${Question.Info}`;
-  hints.innerHTML = `${prefixHints} ${Question.Hints[0]}, ${Question.Hints[1]}`;
+  hints.innerHTML = `${prefixHints} - - -`;
 }
 
 function CheckAnswer() {
