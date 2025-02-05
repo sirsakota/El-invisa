@@ -173,6 +173,7 @@ const vastaus = document.getElementById("vastaus");
 const Counter = document.getElementById("Counter");
 const HealthCounter = document.getElementById("HealthCounter");
 const checkValueAnswer = document.getElementById("checkValueAnswer");
+const TheEnd = document.getElementById("TheEnd");
 
 let AnimalName;
 
@@ -201,24 +202,22 @@ function CorrentAnswer() {
 function WrongAnswer() {
   HintsValue++;
   Lifes -= 1;
-  if (Lifes < 1) {
-    checkValueAnswer.innerHTML = `<div class="wrong">
-    <div class="inwrong">WRONG (Correct answer: ${AnimalName})</div>
-  </div>`;
-  } else {
-    checkValueAnswer.innerHTML = `<div class="wrong">
+  checkValueAnswer.innerHTML = `<div class="wrong">
     <div class="inwrong">WRONG</div>
   </div>`;
+
+  if (Lifes < 0) {
+    LooseScreen();
   }
 
   if (HintsValue == 1) {
-    hints.innerHTML = `${prefixHints} ${Hint1}`;
+    hints.innerHTML = `${prefixHints}<span style="color:rgb(255, 222, 187);"> ${Hint1}</span>`;
   } else if (HintsValue == 2) {
-    hints.innerHTML = `${prefixHints} ${Hint1}, ${Hint2}`;
+    hints.innerHTML = `${prefixHints}<span style="color: rgb(255, 222, 187);"> ${Hint1}, ${Hint2}</span>`;
   } else if (HintsValue == 3) {
-    hints.innerHTML = `${prefixHints} ${Hint1}, ${Hint2}, ${Hint3}`;
+    hints.innerHTML = `${prefixHints}<span style="color: rgb(255, 222, 187);"> ${Hint1}, ${Hint2}, ${Hint3}</span>`;
   } else {
-    hints.innerHTML = `${prefixHints} - - -`;
+    hints.innerHTML = `${prefixHints}<span style="color: rgb(255, 222, 187);"> - - -</span>`;
   }
   sleep(2000).then(() => {
     checkValueAnswer.innerHTML = ``;
@@ -233,19 +232,31 @@ function sleep(ms) {
 
 function CheckHealth(value) {
   if (value == 3) {
-    HealthCounter.style.color = "#8DFF71";
+    HealthCounter.style.color = " #8DFF71";
   } else if (value == 2) {
-    HealthCounter.style.color = "#FFEE71";
+    HealthCounter.style.color = " #FFEE71";
   } else if (value == 1) {
-    HealthCounter.style.color = "#FF6565";
+    HealthCounter.style.color = " #FF6565";
   } else if (value == 0) {
-    HealthCounter.style.color = "#6C6C6C";
+    HealthCounter.style.color = " #6C6C6C";
   }
+}
+
+function WinningScreen() {
+  TheEnd.innerHTML = `<div class="TheEnd win">
+        Good job! You won!
+      </div>`;
+}
+
+function LooseScreen() {
+  TheEnd.innerHTML = `<div class="TheEnd loose">
+        Man you suck lol
+      </div>`;
 }
 
 function Setup() {
   Counter.innerHTML = `${CurrentScore}/10`;
-  HealthCounter.innerHTML = `${Lifes}`;
+  HealthCounter.innerHTML = `Lifes: ${Lifes}`;
   if (HintsValue > 0) {
     return;
   }
@@ -254,20 +265,20 @@ function Setup() {
   Hint1 = Question.Hints[0];
   Hint2 = Question.Hints[1];
   Hint3 = Question.Hints[2];
-  question.innerHTML = `${prefixQuestions} ${Question.Info}`;
+  question.innerHTML = `${prefixQuestions} <span style="color: #FFFFBB;">${Question.Info}</span>`;
 }
 
 function CheckAnswer() {
   if (!vastaus || !isNaN(vastaus.value)) {
     alert("!Error! (You cant leave the message blank or put numbers!)");
     return;
-  } else if (Lifes < 1) {
-    alert("You lost(");
-    return;
-  } else if (CurrentScore >= 10) {
-    alert("You win!");
+  } else if (CurrentScore > 9) {
+    sleep(1000).then(() => {
+      WinningScreen();
+    });
     return;
   }
+
   if (vastaus.value.toLowerCase() == AnimalName.toLowerCase()) {
     CorrentAnswer();
   } else {
