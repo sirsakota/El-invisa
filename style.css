@@ -64,7 +64,7 @@ body {
   width: 420px;
   height: 87.55px;
   background-color: #9fc0aa;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -78,7 +78,7 @@ body {
   justify-content: space-around;
   background-color: #aedce4;
   width: 427px;
-  height: 101px;
+  height: max-content;
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
@@ -90,11 +90,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-width: 448px;
-  min-height: 174px;
+  min-width: max-content;
+  min-height: max-content;
   background-color: #cce7ec;
   border: 2px solid black;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .hints {
@@ -172,6 +173,7 @@ body {
   width: 448px;
   height: 88px;
   color: white;
+  margin-bottom: 20px;
 }
 
 .inwrong {
@@ -196,6 +198,7 @@ body {
   width: 448px;
   height: 88px;
   color: white;
+  margin-bottom: 20px;
 }
 
 .insidecorrect {
@@ -230,6 +233,7 @@ hr {
   background-color: #cce7ec;
   border: 2px solid black;
   border-radius: 5px;
+  margin: 20px;
 }
 
 .insubmit {
@@ -276,4 +280,17 @@ input[type="submit"] {
   height: 60px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.check > * {
+  animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
