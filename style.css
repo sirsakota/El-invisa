@@ -67,7 +67,6 @@ body {
   height: 256px;
   width: 80%;
   gap: 10px;
-  margin-top: 150px;
 }
 
 .main {
@@ -80,6 +79,13 @@ body {
   background-color: #bbcdb9;
   border: 10px solid #628767;
   border-radius: 20px;
+}
+
+.titlesect {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .intitle {
   width: 650px;
@@ -98,8 +104,8 @@ body {
   flex-direction: column;
   justify-content: space-around;
   background-color: #aedce4;
-  width: 427px;
-  height: max-content;
+  width: 627px;
+  height: 150px;
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
