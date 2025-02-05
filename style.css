@@ -334,3 +334,42 @@ input[type="submit"]:hover {
     transform: translate(0.1px, -0.2px) rotate(-0.1deg);
   }
 }
+
+.healthloss1 {
+  animation: healthloss1 0.5s;
+}
+
+@keyframes .healthloss1 {
+  0% {
+    color: #8dff71;
+  }
+  100% {
+    color: #ffee71;
+  }
+}
+
+.healthloss2 {
+  animation: healthloss2 0.5s;
+}
+
+@keyframes .healthloss2 {
+  0% {
+    color: #ffee71;
+  }
+  100% {
+    color: #ff6565;
+  }
+}
+
+.healthloss3 {
+  animation: healthloss3 0.5s;
+}
+
+@keyframes .healthloss3 {
+  0% {
+    color: #ff6565;
+  }
+  100% {
+    color: #6c6c6c;
+  }
+}
