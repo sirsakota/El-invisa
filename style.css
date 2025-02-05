@@ -183,7 +183,7 @@ body {
   border-radius: 5px;
   width: 209px;
   height: 63px;
-  color: rgb(165, 255, 165);
+  color: #8dff71;
 }
 
 .check {
@@ -331,75 +331,117 @@ input[type="submit"]:hover {
 
 @keyframes shake {
   0% {
-    transform: translate(0.1px, 0.1px) rotate(0deg);
+    transform: translate(1px, 1px) rotate(0deg);
   }
   10% {
-    transform: translate(-0.1px, -0.2px) rotate(-0.1deg);
+    transform: translate(-1px, -0.2px) rotate(-1deg);
   }
   20% {
-    transform: translate(-0.3px, 0px) rotate(0.1deg);
+    transform: translate(-0.3px, 0px) rotate(1deg);
   }
   30% {
     transform: translate(0.3px, 0.2px) rotate(0deg);
   }
   40% {
-    transform: translate(0.1px, -0.1px) rotate(0.1deg);
+    transform: translate(1px, -1px) rotate(1deg);
   }
   50% {
-    transform: translate(-0.1px, 0.2px) rotate(-0.1deg);
+    transform: translate(-1px, 0.2px) rotate(-1deg);
   }
   60% {
-    transform: translate(-0.3px, 0.1px) rotate(0deg);
+    transform: translate(-0.3px, 1px) rotate(0deg);
   }
   70% {
-    transform: translate(0.3px, 0.1px) rotate(-0.1deg);
+    transform: translate(0.3px, 1px) rotate(-1deg);
   }
   80% {
-    transform: translate(-0.1px, -0.1px) rotate(0.1deg);
+    transform: translate(-1px, -1px) rotate(1deg);
   }
   90% {
-    transform: translate(0.1px, 0.2px) rotate(0deg);
+    transform: translate(1px, 0.2px) rotate(0deg);
   }
   100% {
-    transform: translate(0.1px, -0.2px) rotate(-0.1deg);
+    transform: translate(1px, -0.2px) rotate(-1deg);
   }
 }
 
 .healthloss1 {
-  animation: healthloss1 0.5s;
+  animation: healthloss1 1s forwards ease-in;
 }
 
 @keyframes healthloss1 {
   0% {
     color: #8dff71;
+    transform: translateX(0);
+  }
+  25% {
+    color: #8dff71;
+    transform: translateX(-2px);
+  }
+  50% {
+    color: #e7ff71;
+    transform: translateX(2px);
+  }
+  75% {
+    color: #ffee71;
+    transform: translateX(-2px);
   }
   100% {
     color: #ffee71;
+    transform: translateX(0);
   }
 }
 
 .healthloss2 {
-  animation: healthloss2 0.5s;
+  animation: healthloss2 1s forwards ease-in;
 }
 
 @keyframes healthloss2 {
   0% {
     color: #ffee71;
+    transform: translateX(0);
+  }
+  25% {
+    color: #ffee71;
+    transform: translateX(-2px);
+  }
+  50% {
+    color: #ffc765;
+    transform: translateX(2px);
+  }
+  75% {
+    color: #ff6565;
+    transform: translateX(-2px);
   }
   100% {
     color: #ff6565;
+    transform: translateX(0);
   }
 }
 
 .healthloss3 {
-  animation: healthloss3 0.5s;
+  animation: healthloss3 1s forwards ease-in;
 }
 
 @keyframes healthloss3 {
   0% {
     color: #ff6565;
+    transform: translateX(0);
+  }
+  25% {
+    color: #ff6565;
+    transform: translateX(-2px);
+  }
+  50% {
+    color: #bb8484;
+    transform: translateX(2px);
+  }
+  75% {
+    color: #6c6c6c;
+    transform: translateX(-2px);
   }
   100% {
     color: #6c6c6c;
+    transform: translateX(0);
   }
 }
