@@ -231,14 +231,16 @@ function sleep(ms) {
 }
 
 function CheckHealth(value) {
+  HealthCounter.classList.remove("healthloss1", "healthloss2", "healthloss3");
+
   if (value == 3) {
-    HealthCounter.style.color = " #8DFF71";
+    HealthCounter.classList.add("healthloss1");
   } else if (value == 2) {
-    HealthCounter.style.color = " #FFEE71";
+    HealthCounter.classList.add("healthloss1");
   } else if (value == 1) {
-    HealthCounter.style.color = " #FF6565";
+    HealthCounter.classList.add("healthloss2");
   } else if (value == 0) {
-    HealthCounter.style.color = " #6C6C6C";
+    HealthCounter.classList.add("healthloss3");
   }
 }
 
