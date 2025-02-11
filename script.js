@@ -5,19 +5,27 @@ const animals = {
       Info: "Suuri ja karvainen eläin, joka nukkuu talvella.",
       Hints: [
         "Asuu metsässä",
-        "Pitää marjoista ja kalasta",
-        "Voimakas ja suuri",
+        "Syö marjoja ja kalaa",
+        "Hyvin suuri ja voimakas",
       ],
     },
     {
       Name: "Tiikeri",
       Info: "Vaarallinen kissapeto, joka tunnetaan oransseista ja mustista raidoistaan.",
-      Hints: ["Metsästää peuroja", "Oranssinmustat raidat", "On hyvä uimari"],
+      Hints: [
+        "Metsästää suuria saaliita",
+        "Oranssinmustat raidat",
+        "On hyvä uimari",
+      ],
     },
     {
       Name: "Hiiri",
       Info: "Pieni, nopea ja älykäs jyrsijä, joka elää pesässä ja rakastaa syödä juustoa.",
-      Hints: ["Vikisee", "Pitkä häntä", "Hyvin älykäs ja utelias"],
+      Hints: [
+        "Vikisee ja piiloutuu helposti",
+        "Pitkä häntä",
+        "Hyvin älykäs ja utelias",
+      ],
     },
     {
       Name: "Lehmä",
@@ -29,8 +37,8 @@ const animals = {
       Info: "Uskollinen lemmikki, joka on tunnettu älykkyydestään.",
       Hints: [
         "Suosituin lemmikki",
-        "Pystyy oppimaan käskyjä",
-        "Rakastaa lenkkeilyä",
+        "Oppii hyvin käskyjä",
+        "Rakastaa ulkoilua ja leikkejä",
       ],
     },
     {
@@ -39,7 +47,7 @@ const animals = {
       Hints: [
         "Voi oppia puhumaan",
         "Rakastaa siemeniä",
-        "Elää trooppisissa metsissä",
+        "Elää tropiikissa ja metsissä",
       ],
     },
     {
@@ -47,7 +55,7 @@ const animals = {
       Info: "Pieni ja nopea jyrsijä, joka tunnetaan hyvin sopeutuvasta luonteestaan ja karvattomasta hännästään.",
       Hints: [
         "Nopea ja älykäs",
-        "Voi elää lähes kaikissa ympäristöissä",
+        "Elää monenlaisissa ympäristöissä",
         "Karvaton häntä",
       ],
     },
@@ -55,9 +63,9 @@ const animals = {
       Name: "Kissa",
       Info: "Itsenäinen ja arvoituksellinen lemmikki, joka nauttii omasta tilastaan mutta on myös rakastettu seuraeläin.",
       Hints: [
-        "On erittäin hyvä saalistaja",
-        "Tykkää 'Whiskas'-ruoasta",
-        "Möykkää yöllä",
+        "On taitava saalistaja",
+        "Tykkää erityisesti liharuokista",
+        "Möykkää yöllä ja pitää itsenäisyyttään",
       ],
     },
     {
@@ -65,7 +73,7 @@ const animals = {
       Info: "Pieni, nopea ja ketterä eläin, joka elää metsissä ja talvehtii nukkumalla.",
       Hints: [
         "Rakastaa pähkinöitä",
-        "Nopea ja ketterä",
+        "Hyvin nopea ja ketterä",
         "Kerää talveksi ruokaa",
       ],
     },
@@ -74,14 +82,18 @@ const animals = {
       Info: "Suurikokoinen peto, joka elää merissä. On tunnettu kyvystään haistaa verta ja liikkua nopeasti vedessä.",
       Hints: [
         "Uiminen on sen elinehto",
-        "Voi haistaa veren kilometrien päästä",
+        "Haistaa veren erittäin pitkältä",
         "Syö muita merieläimiä",
       ],
     },
     {
       Name: "Leopardi",
       Info: "Kaunis, ketterä ja vahva kisapeto, joka tunnetaan erityisesti sen täplikkäistä turkeistaan.",
-      Hints: ["Tähtää saaliinsa päähän", "Hyvin kiipeävä", "Täplikkäät turkit"],
+      Hints: [
+        "Tähtää saaliinsa päähän",
+        "Erinomainen kiipeilijä",
+        "Täplikkäät turkit",
+      ],
     },
     {
       Name: "Elefantti",
@@ -89,13 +101,17 @@ const animals = {
       Hints: [
         "Tornimaiset korvat",
         "Pitkä kärsä",
-        "Rauhallinen mutta voimakas",
+        "Rauhallinen mutta erittäin voimakas",
       ],
     },
     {
       Name: "Pingviini",
       Info: "Lentokyvytön lintu, joka elää Etelämantereella. Erinomainen uimari, joka sukeltaa syvälle etsiessään ruokaa.",
-      Hints: ["Elää kylmässä", "Pystyy uimaan pitkälle", "Ei pysty lentämään"],
+      Hints: [
+        "Elää kylmässä ympäristössä",
+        "Erinomainen uimari",
+        "Ei pysty lentämään",
+      ],
     },
     {
       Name: "Panda",
@@ -115,8 +131,8 @@ const animals = {
       Name: "Zebra",
       Info: "Hevoseläin, joka tunnetaan mustavalkoisista raidoistaan ja elää suurissa laumoissa Afrikassa.",
       Hints: [
-        "Raidat, jotka tekevät siitä erottuvan",
-        "Asuu savanneilla",
+        "Mustavalkoiset raidat",
+        "Elää Afrikan savanneilla",
         "Sosiaaliset eläimet",
       ],
     },
@@ -125,8 +141,8 @@ const animals = {
       Info: "Siivekäs eläin, joka pystyy lentämään ja pesii usein puissa.",
       Hints: [
         "Pystyy lentämään",
-        "Lähes kaikki linnut munivat",
-        "Suojaa siivet",
+        "Useimmat linnut munivat",
+        "Suojaa siivet ja pesii korkealla",
       ],
     },
     {
@@ -135,7 +151,7 @@ const animals = {
       Hints: [
         "Hyppää pitkälle",
         "Elää Australiassa",
-        "Hyvin voimakkaat takajalat",
+        "Erittäin voimakkaat takajalat",
       ],
     },
     {
@@ -150,7 +166,38 @@ const animals = {
     {
       Name: "Delfiini",
       Info: "Älykkäitä ja leikkisiä mereneläväisiä, jotka tunnetaan ystävällisyydestään ja akrobaattisista taidoistaan.",
-      Hints: ["Hyvin älykäs", "Asuu meressä", "Rakastaa leikkiä"],
+      Hints: [
+        "Hyvin älykäs",
+        "Asuu meressä",
+        "Rakastaa leikkiä ja hyppimistä vedessä",
+      ],
+    },
+    {
+      Name: "Susi",
+      Info: "Villieläin, joka elää laumoissa ja on tunnettu ääntelystään sekä metsästyksestään.",
+      Hints: [
+        "Elää laumoissa",
+        "On älykäs ja hyvä metsästäjä",
+        "Pystyy ulvomaan pitkälle",
+      ],
+    },
+    {
+      Name: "Krokotiili",
+      Info: "Vaarallinen matelija, joka elää makeassa vedessä ja on tunnettu nopeistaan hyökkäyksistään.",
+      Hints: [
+        "Elää vesistöissä",
+        "Pystyy liikkumaan nopeasti vedessä",
+        "Hyvin vahvat leuat",
+      ],
+    },
+    {
+      Name: "Muurahainen",
+      Info: "Pieni ja ahkera hyönteinen, joka elää suurissa yhteiskunnissa ja on tunnettu työstään.",
+      Hints: [
+        "Elää suurissa kolonisissa ryhmissä",
+        "Työskentelee ahkerasti ruokavarastojen keräämiseksi",
+        "On erittäin vahva suhteessa kokoon",
+      ],
     },
   ],
 };
@@ -283,7 +330,9 @@ function CheckAnswer() {
 
   if (vastaus.value.toLowerCase() == AnimalName.toLowerCase()) {
     CorrentAnswer();
+    vastaus.value = "";
   } else {
     WrongAnswer();
+    vastaus.value = "";
   }
 }
