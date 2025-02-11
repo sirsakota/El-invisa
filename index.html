@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eläinvisa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--the font links-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
@@ -14,7 +15,9 @@
   </head>
   <body>
     <div class="main" id="TheEnd">
+      <!-- The main div for the whole content-->
       <div class="startScreen" id="startScreen">
+        <!--what the page displays at the start-->
         <div class="intitle">Eläinvisa</div>
         <input
           style="margin-top: 100px"
@@ -24,8 +27,10 @@
           id="start"
           value="Aloita"
         />
+        <!--the start button that takes you to the quiz screen-->
       </div>
       <div class="counters">
+        <!--the display for current score and health left-->
         <div class="count">
           <div class="incount" id="Counter">0/10</div>
         </div>
@@ -35,10 +40,12 @@
       </div>
 
       <div class="titlesect">
+        <!--main title for the quiz-->
         <div class="intitle">Eläinvisa</div>
         <div class="result"></div>
       </div>
       <div class="mainsect">
+        <!--where all the questions, hints and result will be displayed-->
         <div class="question">
           <div class="inquestion" id="question">
             Mikä eläin on kyseessä: - - -
@@ -51,6 +58,7 @@
       </div>
       <div class="check" id="checkValueAnswer"></div>
       <div class="Vastausalue">
+        <!--where you can submit an answer-->
         <div class="submit">
           <div class="insubmit">
             <div class="textSubmit">
@@ -66,11 +74,13 @@
         </div>
       </div>
       <div class="footer">
+        <!--creator names, only displayed during quiz, not start screen-->
         <div class="creators">Tekijät: Maxim ja Misa</div>
       </div>
     </div>
 
     <audio src="Hollow Knight OST - Crossroads.mp3" autoplay loop></audio>
+    <!--the chosen audio dor the whole page-->
 
     <script src="script.js"></script>
   </body>
