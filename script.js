@@ -66,7 +66,7 @@ const animals = {
     },
     {
       Name: "Orava",
-      Info: "Pieni, nopea ja ketterä eläin, joka kiipeilee puissa ja pitää pähkinöistö.",
+      Info: "Pieni, nopea ja ketterä eläin, joka kiipeilee puissa ja pitää pähkinöistä.",
       Hints: ["Nukkuu talvet", "Pörröinen karvahäntä", "Kerää talveksi ruokaa"],
     },
     {
