@@ -212,6 +212,8 @@ let MaxScore = 10;
 let prefixQuestions = "Mikä eläin on kyseessä: ";
 let prefixHints = "Vinkkit: ";
 
+const click = new Audio("mouse.mp3");
+
 const start = document.getElementById("start");
 const startScreen = document.getElementById("startScreen");
 const question = document.getElementById("question");
@@ -318,6 +320,7 @@ function Setup() {
 }
 
 function CheckAnswer() {
+  click.play();
   if (!vastaus || !isNaN(vastaus.value)) {
     alert("!Error! (You cant leave the message blank or put numbers!)");
     return;
