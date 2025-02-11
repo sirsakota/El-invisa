@@ -82,27 +82,27 @@ const animals = {
       Name: "Leopardi",
       Info: "Kaunis, ketterä ja vahva kisapeto, joka tunnetaan erityisesti sen täplikkäistä turkeistaan.",
       Hints: [
-        "Tähtää saaliinsa päähän",
-        "Erinomainen kiipeilijä",
-        "Täplikkäät turkit",
+        "Pitkä häntä joka auttaa tasapainottelussa",
+        "Erinomainen kiipeilijä joka kantaa saaliinsa puuhun",
+        "Usein vaaleanruskea musta-valkoisilla täplillä",
       ],
     },
     {
       Name: "Elefantti",
-      Info: "Maailman suurin maaeläin, tunnettu valtavasta koosta, pitkistä sarvista ja älykkyydestään.",
+      Info: "Maailman suurin maaeläin, tunnettu pitkistä sarvista ja älykkyydestään.",
       Hints: [
-        "Tornimaiset korvat",
+        "Tornimaiset korvat joillaeläin voi säätää lämpötilaansa",
         "Pitkä kärsä",
-        "Rauhallinen mutta erittäin voimakas",
+        "Erittäin pitkä muisti",
       ],
     },
     {
       Name: "Pingviini",
-      Info: "Lentokyvytön lintu, joka elää Etelämantereella. Erinomainen uimari, joka sukeltaa syvälle etsiessään ruokaa.",
+      Info: "Lentokyvytön lintu, joka elää Etelämantereella.",
       Hints: [
-        "Elää kylmässä ympäristössä",
-        "Erinomainen uimari",
-        "Ei pysty lentämään",
+        "Sukeltaa saalistamaan kalaa",
+        "Useimmat lajit ovat väriltään mustavalkoisia, kuin olisivat pukeutuneet smokkiin",
+        "Urokset lahjovat naaraita kauniilla kivillä pariutuakseen",
       ],
     },
     {
